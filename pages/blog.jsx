@@ -8,7 +8,7 @@ const Blog = ({Blogs}) => {
   const pathname = useRouter()
   // console.log(pathname)
   // useEffect(() => {
-  //   fetch("http://blog-pk.netlify.app/api/getblogs").then((data) => {
+  //   fetch("http://localhost:3000/api/getblogs").then((data) => {
   //     return data.json();
   //   }).then((parseddata) => {
   //     setBlogs(parseddata)
@@ -37,7 +37,7 @@ const Blog = ({Blogs}) => {
 export async function getServerSideProps(context) {
   let title =context.query.Blogs
   console.log()
-  let blog = await fetch("http://blog-pk.netlify.app/api/getblogs")
+  let blog = await fetch("http://localhost:3000/api/getblogs")
   let Allblogs = await blog.json();
   return {
     props: {Blogs:Allblogs}, // will be passed to the page component as props

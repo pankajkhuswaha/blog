@@ -21,7 +21,7 @@ export default function Home({Blogs}) {
   )
 }
 export async function getServerSideProps(context) {
-  let blog = await fetch("http://blog-pk.netlify.app/api/getblogs")
+  let blog = await fetch("http://localhost:3000/api/getblogs")
   let Allblogs = await blog.json();
   return {
     props: {Blogs:Allblogs}, // will be passed to the page component as props
