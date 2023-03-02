@@ -8,7 +8,7 @@ const Addblog = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        fetch('http://localhost:3000/api/addblogs', {
+        fetch('http://blog-pk.netlify.app/api/addblogs', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

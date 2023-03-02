@@ -12,7 +12,7 @@ const Blogs = ({ Blog }) => {
   const [blog, setblog] = useState(Blog)
   // * Old method which is used in React
   // useEffect(()=>{
-  //   fetch(`http://localhost:3000/api/getSingleblog?blog=${adress}`).then((data)=>{
+  //   fetch(`http://blog-pk.netlify.app/api/getSingleblog?blog=${adress}`).then((data)=>{
   //     return data.json();
   //   }).then((parsedData)=>{
   //     setblog(parsedData)
@@ -41,7 +41,7 @@ const Blogs = ({ Blog }) => {
 export async function getServerSideProps(context) {
   let title = context.query.Blogs
   // console.log(title)
-  let blog = await fetch(`http://localhost:3000/api/getSingleblog?blogs=${title}`)
+  let blog = await fetch(`http://blog-pk.netlify.app/api/getSingleblog?blogs=${title}`)
   let singleblog = await blog.json();
   // console.log(singleblog)
   return {

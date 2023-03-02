@@ -1,5 +1,5 @@
 // export default async function handler(req, res) {
-//     let data = await fetch("http://localhost:3000/api/getblogs")
+//     let data = await fetch("http://blog-pk.netlify.app/api/getblogs")
 //     let parseddata = await data?.json();
 //     if (req.method === 'POST') {
 //         if (req?.body!==undefined &&req?.body!=="") {
@@ -7,7 +7,7 @@
 //             let blogExists = parseddata?.find((arr)=>arr.name===newBlog?.name)
 //             if(blogExists==undefined){
 //                  res.status(200).json("New Blog add request accepted")
-//                  fetch('http://localhost:3000/api/getblogs', {
+//                  fetch('http://blog-pk.netlify.app/api/getblogs', {
 //                     method: 'POST',
 //                     headers: {
 //                         "Content-Type": "application/json",

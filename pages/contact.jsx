@@ -8,7 +8,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if(name!==''&&email!==''&&desc!==''){
-            fetch('http://localhost:3000/api/contactapi', {
+            fetch('http://blog-pk.netlify.app/api/contactapi', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

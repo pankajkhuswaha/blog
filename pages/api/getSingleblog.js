@@ -16,7 +16,7 @@
   
 
 export default async function handler(req, res) {
-    let data = await fetch("http://localhost:3000/api/getblogs")
+    let data = await fetch("http://blog-pk.netlify.app/api/getblogs")
     let parseddata = await data?.json();
     let userqery = req?.query?.blogs
     // console.log(userqery,"api")
