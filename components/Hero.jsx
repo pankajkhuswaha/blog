@@ -5,8 +5,8 @@ import PK from '@/public/pk';
 
 const Hero = ({blogs}) => {
     const color ="#ffff"
-    const latest = blogs?.splice(0,3)
-    // let latest =[]
+    const rev = blogs.reverse();
+    let latest =rev.slice(0,3)
 return (
     <>
         <div className="flex flex-wrap sm:px-[20vw] mx-[5vw] p-4">
