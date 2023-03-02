@@ -26,3 +26,5 @@ export  const BlogData = [{
     "name": "what-is-javascript"
   }
   ]
+
+export const product =["Desktop","Mobile","techology","webDevlopment"]

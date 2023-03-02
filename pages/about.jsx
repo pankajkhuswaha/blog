@@ -34,7 +34,7 @@ const About = ({products}) => {
 }
 export async function getServerSideProps(context) {
   let title =context.query.Blogs
-  console.log()
+  // console.log()
   let product = await fetch("http://blog-pk.netlify.app/api/products")
   let Allproducts = await product.json();
   return {
