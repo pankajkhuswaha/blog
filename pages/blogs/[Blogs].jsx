@@ -8,7 +8,7 @@ const Blogs = ({ Blog }) => {
   function createMarkup(data) {
     return { __html: data };
   }
-  console.log(Blog)
+  // console.log(Blog)
   const [blog, setblog] = useState(Blog)
   // * Old method which is used in React
   // useEffect(()=>{
@@ -40,10 +40,10 @@ const Blogs = ({ Blog }) => {
 //* To Generate basic html from apu
 export async function getServerSideProps(context) {
   let title = context.query.Blogs
-  console.log(title)
-  let blog = await fetch(`http://localhost:3000/api/getSingleblog?blog=${title}`)
+  // console.log(title)
+  let blog = await fetch(`http://localhost:3000/api/getSingleblog?blogs=${title}`)
   let singleblog = await blog.json();
-  console.log(singleblog)
+  // console.log(singleblog)
   return {
     props: { Blog: singleblog }, // will be passed to the page component as props
   }
